@@ -6,11 +6,15 @@
     "48": "logo192.png",
     "128": "logo512.png"
   },
-  "permissions": [],
+  "permissions": [
+    "http://*/",
+    "https://*/"
+  ],
   "manifest_version": 2,
   "version": "0.0.1",
   "browser_action": {
     "default_popup": "index.html",
     "default_title": "A Line Translate"
-  }
+  },
+  "web_accessible_resources": ["getSource.js"]
 }
