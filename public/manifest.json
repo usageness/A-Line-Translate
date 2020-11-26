@@ -6,7 +6,12 @@
     "48": "logo192.png",
     "128": "logo512.png"
   },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
   "permissions": [
+    "tabs",
     "http://*/",
     "https://*/"
   ],
