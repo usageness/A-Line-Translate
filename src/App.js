@@ -24,6 +24,7 @@ function App() {
     </div>
   );
 }
+
 function __onWindowLoad() {
   chrome.extension.onMessage.addListener(function(request, sender) {
     if(request.action == "getSource") {

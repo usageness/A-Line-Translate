@@ -21,5 +21,12 @@
     "default_popup": "index.html",
     "default_title": "A Line Translate"
   },
-  "web_accessible_resources": ["getSource.js"]
+  "web_accessible_resources": ["getSource.js"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "all_frames": true,
+      "js": ["getSource.js"]
+    }
+  ]
 }

@@ -21,7 +21,7 @@ function dragText() {
         text = window.getSelection().toString();
     }
     else if (document.selection) {
-        text = window.selection.createRange().texst;
+        text = window.selection.createRange().text;
     }
     return text;
 }
