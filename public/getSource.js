@@ -1,7 +1,5 @@
 /* global chrome */
-console.log("immediate function test");
-
-const targetUrl = "http://alinetranslate.cafe24app.com/translate?sourceText=";
+const targetUrl = "your URL";
 
 function get_source(document_body) {
     console.log("immediate function test22");
@@ -37,18 +35,29 @@ document.onmouseup = function() {
 function displayText(translated) {
     let newDIV = document.createElement("div");
     let newP = document.createElement("p");
+    let closeButton = document.createElement("span");
+
+    closeButton.innerHTML = "X";
+    closeButton.addEventListener('click', function() {
+        this.parentElement.style.display = "none";
+    });
+    newP.innerHTML = translated;
+
+    newDIV.appendChild(closeButton);
     newDIV.appendChild(newP);
 
-    newP.innerHTML = translated;
-    newDIV.setAttribute("id","textView");
+    newDIV.setAttribute("class","translatedTextView");
     newDIV.style.padding = "1rem";
     newDIV.style.position = "fixed";
     newDIV.style.zIndex = "1";
     newDIV.style.right = "0";
     newDIV.style.top = "0";
+    newDIV.style.textAlign = "right";
+    newDIV.style.background = "#FFFFFF";
+    newDIV.style.border = "2px solid #CEECF5";
+    newDIV.style.borderRadius = "1em 0 0 1em";
 
-    let body = document.getElementsByClassName("body");
-    body.appendChild(newDIV);
+    document.body.appendChild(newDIV);
 }
 
 function getTranslate(text) {
@@ -57,8 +66,8 @@ function getTranslate(text) {
     fetch(url, {mode: 'cors'})
         .then((response) => response.json())
         .then((data) => (function() {
-            alert(data.message.result.translatedText);
-            console.log(data.message.result.translatedText);
+            let translatedText = data.message.result.translatedText;
+            displayText(translatedText);
         })())
         .catch((error) => console.log(error))
 }
