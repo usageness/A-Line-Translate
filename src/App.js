@@ -1,6 +1,4 @@
 /* global chrome */
-
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -8,17 +6,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <p><strong>한 줄 번역기 (A Line Translate)</strong></p>
+        <p>텍스트를 드래그해보세요!</p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://github.com/usageness/A-Line-Translate"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React?
+          github
         </a>
       </header>
     </div>

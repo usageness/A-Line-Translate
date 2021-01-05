@@ -1,5 +1,5 @@
 /* global chrome */
-const targetUrl = "your URL";
+const targetUrl = "serverURL?sourceText=";
 
 function get_source(document_body) {
     console.log("immediate function test22");
