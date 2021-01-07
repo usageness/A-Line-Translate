@@ -55,7 +55,7 @@ function displayText(translated) {
     newDIV.style.textAlign = "right";
     newDIV.style.background = "#FFFFFF";
     newDIV.style.border = "2px solid #CEECF5";
-    newDIV.style.borderRadius = "1em 0 0 1em";
+    newDIV.style.borderRadius = "1em 0 1em 1em";
 
     document.body.appendChild(newDIV);
 }
