@@ -12,6 +12,7 @@
   },
   "permissions": [
     "tabs",
+    "file://*/",
     "http://*/",
     "https://*/"
   ],
